@@ -1,3 +1,7 @@
+const fetchResult =         //API from STARWARS
+fetch(`https://akabab.github.io/starwars-api/api/all.json`)
+.then(response => response.json());
+
 const button = document.getElementById('getCharacter');
     
 button.addEventListener('click', (e) =>{
@@ -38,18 +42,13 @@ button.addEventListener('click', (e) =>{
         //Skip ID: 17 (Not Present in the API Object) or Limit Length to 87
         const randomId = Math.floor(Math.random() * 88); ///(0 to 87)
 
-
-
-        //API from STARWARS
-        fetch(`https://akabab.github.io/starwars-api/api/all.json`)
-        .then(response => response.json())
-        .then(allCharacters => {
+        fetchResult.then((allCharacters) => {
             //Retrieve only one character in the list based on the randomly generated number
             const character = allCharacters[randomId];
             
             //Change Image
             image.src = character['image'];
-            
+
             //Changing Inner HTMLs of Elements
             name.innerHTML = character['name'];
             height.innerHTML = character['height'];
