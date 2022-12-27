@@ -10,7 +10,25 @@ button.addEventListener('click', (e) =>{
         const birthYear = document.getElementById('birth-year');
         const gender = document.getElementById('gender');
 
+        //Display Loading... on the ELements Content
+        name.innerHTML = "<em>Loading...</em>";
+        height.innerHTML = "<em>Loading...</em>";
+        eyeColor.innerHTML = "<em>Loading...</em>";
+        birthYear.innerHTML = "<em>Loading...</em>";
+        gender.innerHTML = "<em>Loading...</em>";
+
         //Variable for holder random number to be used as id for Fetch API
         const randomId = Math.ceil(Math.random() * 83);
+
+        fetch(`https://swapi.dev/api/people/${randomId}`)
+        .then(response => response.json())
+        .then(character => {
+            //Changing Inner HTMLs of Elements
+            name.innerHTML = character['name'];
+            height.innerHTML = character['height'];
+            eyeColor.innerHTML = character['eye_color'];
+            birthYear.innerHTML = character['birth_year'];
+            gender.innerHTML = character['gender'];
+        });
         
     });
