@@ -21,6 +21,7 @@ button.addEventListener('click', (e) =>{
         eyeColor.innerHTML = "<em>Loading...</em>";
         species.innerHTML = "<em>Loading...</em>";
         gender.innerHTML = "<em>Loading...</em>";
+        image.src = '/img/fetch-api.jpeg';
 
         //Variable for holder random number to be used as id for Fetch API (1 t0 83)
         /*
