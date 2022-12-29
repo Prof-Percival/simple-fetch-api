@@ -30,3 +30,6 @@ With the Image, I get a URL which I use it to set the <b>src</b> attribute value
 <br>
 While the page delays with loading the contents, it will display a default Image, and <b>Loading...</b> for all the elements that displays texts
 </p>
+
+<h2 align='center'>DEMO</h2>
+<img src="/img/demo.png" alt="Site Demo" style="width: 100%;"/>
