@@ -13,7 +13,7 @@ button.addEventListener('click', (e) =>{
         const eyeColor = document.getElementById('eye-color');
         const species = document.getElementById('species');
         const gender = document.getElementById('gender');
-        const image = document.querySelector('img');
+        const image = document.querySelector('#character-image');
 
         //Display Loading... on the ELements Content
         name.innerHTML = "<em>Loading...</em>";
